@@ -1,4 +1,4 @@
-# RAPYUTA_INTERVIEW PROJECT
+# unit_tests_example PROJECT
 
 Tested on Ubuntu 16.04, GCC 5.4.0, CMake 3.5.1
 
