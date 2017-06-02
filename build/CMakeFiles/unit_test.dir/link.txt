@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/unit_test.dir/gtest/sorting_and_searching_test.cpp.o  -o unit_test -rdynamic lib/googletest-1.8.0/googlemock/gtest/libgtest.a lib/googletest-1.8.0/googlemock/gtest/libgtest_main.a lib/googletest-1.8.0/googlemock/gtest/libgtest.a -lpthread 
