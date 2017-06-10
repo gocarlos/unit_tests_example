@@ -1,9 +1,12 @@
 cmake_minimum_required (VERSION 2.8)
-project (interview_rapyuta)
+project (unit_test_example)
 
-# Use C++11
+# Use C++11 : cmake >= 3.1
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Use C++11 : cmake <= 3.1
+add_definitions(-std=c++11)
 
 ##############
 # External Library
@@ -16,11 +19,11 @@ enable_testing()
 
 # Include the gtest library.
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
-  
+
 ##############
 # Executables
 ##############
-  
+
 add_executable (main src/sorting_and_searching.cpp)
 
 ##############
