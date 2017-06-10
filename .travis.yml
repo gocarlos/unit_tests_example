@@ -1,1 +1,16 @@
-
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - gcc-6
+    - g++-6
+os:
+  - linux
+language: cpp
+compiler:
+  - gcc
+script: ./travis.sh
+notifications:
+  email: false
+sudo: false
