@@ -1,8 +1,9 @@
-# unit_tests_example PROJECT
+# Example of the usage of google tests with CMake.
 
-Tested on Ubuntu 16.04, GCC 5.4.0, CMake 3.5.1
 
 [![Build Status](https://travis-ci.org/gocarlos/unit_tests_example.svg?branch=master)](https://travis-ci.org/gocarlos/unit_tests_example)
+
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
 
 ## USAGE - RUN
@@ -14,4 +15,3 @@ In the project root:
 * make
 * ./main      	% executable
 * ./unit_test	% unit test
- 

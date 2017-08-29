@@ -4,4 +4,5 @@
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-subdirs(lib/googletest-1.8.0)
+add_test(test1 "unit_test_example_test")
+subdirs("external/gtest")

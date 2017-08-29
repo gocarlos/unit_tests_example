@@ -14,15 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//Builds the googlemock subproject
-BUILD_GMOCK:BOOL=ON
-
-//Builds the googletest subproject
-BUILD_GTEST:BOOL=OFF
-
-//Build shared libraries (DLLs).
-BUILD_SHARED_LIBS:BOOL=OFF
-
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
@@ -34,7 +25,7 @@ CMAKE_BUILD_TYPE:STRING=
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-7
 
 //Flags used by the compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -53,7 +44,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc-7
 
 //Flags used by the compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -123,7 +114,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=interview_rapyuta
+CMAKE_PROJECT_NAME:STATIC=unit_test_example
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -174,63 +165,20 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Path to a program.
-PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
+//Git command line client
+GIT_EXECUTABLE:FILEPATH=/usr/bin/git
 
 //Value Computed by CMake
-gmock_BINARY_DIR:STATIC=/home/gocarlos/git/unit_tests_example/build/lib/googletest-1.8.0/googlemock
-
-//Dependencies for the target
-gmock_LIB_DEPENDS:STATIC=general;-lpthread;
+gtest_builder_BINARY_DIR:STATIC=/home/gocarlos/git/unit_tests_example/build/external/gtest
 
 //Value Computed by CMake
-gmock_SOURCE_DIR:STATIC=/home/gocarlos/git/unit_tests_example/lib/googletest-1.8.0/googlemock
-
-//Build all of Google Mock's own tests.
-gmock_build_tests:BOOL=OFF
-
-//Dependencies for the target
-gmock_main_LIB_DEPENDS:STATIC=general;-lpthread;
+gtest_builder_SOURCE_DIR:STATIC=/home/gocarlos/git/unit_tests_example/external/gtest
 
 //Value Computed by CMake
-googletest-distribution_BINARY_DIR:STATIC=/home/gocarlos/git/unit_tests_example/build/lib/googletest-1.8.0
+unit_test_example_BINARY_DIR:STATIC=/home/gocarlos/git/unit_tests_example/build
 
 //Value Computed by CMake
-googletest-distribution_SOURCE_DIR:STATIC=/home/gocarlos/git/unit_tests_example/lib/googletest-1.8.0
-
-//Value Computed by CMake
-gtest_BINARY_DIR:STATIC=/home/gocarlos/git/unit_tests_example/build/lib/googletest-1.8.0/googlemock/gtest
-
-//Dependencies for the target
-gtest_LIB_DEPENDS:STATIC=general;-lpthread;
-
-//Value Computed by CMake
-gtest_SOURCE_DIR:STATIC=/home/gocarlos/git/unit_tests_example/lib/googletest-1.8.0/googletest
-
-//Build gtest's sample programs.
-gtest_build_samples:BOOL=OFF
-
-//Build all of gtest's own tests.
-gtest_build_tests:BOOL=OFF
-
-//Disable uses of pthreads in gtest.
-gtest_disable_pthreads:BOOL=OFF
-
-//Use shared (DLL) run-time lib even when Google Test is built
-// as static lib.
-gtest_force_shared_crt:BOOL=OFF
-
-//Build gtest with internal symbols hidden in shared libraries.
-gtest_hide_internal_symbols:BOOL=OFF
-
-//Dependencies for the target
-gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
-
-//Value Computed by CMake
-interview_rapyuta_BINARY_DIR:STATIC=/home/gocarlos/git/unit_tests_example/build
-
-//Value Computed by CMake
-interview_rapyuta_SOURCE_DIR:STATIC=/home/gocarlos/git/unit_tests_example
+unit_test_example_SOURCE_DIR:STATIC=/home/gocarlos/git/unit_tests_example
 
 
 ########################
@@ -244,9 +192,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/gocarlos/git/unit_tests_example/build
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=5
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=7
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=2
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -331,7 +279,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -339,7 +287,7 @@ CMAKE_OBJDUMP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_RANLIB
 CMAKE_RANLIB-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.5
+CMAKE_ROOT:INTERNAL=/usr/share/cmake-3.7
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -370,10 +318,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding PythonInterp
-FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.12()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
-//ADVANCED property for variable: PYTHON_EXECUTABLE
-PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GIT_EXECUTABLE
+GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/SortSearch.hpp
+assert.h
+-
+limits
+-
+random
+-
+
+/home/gocarlos/git/unit_tests_example/src/sorting_and_searching.cpp
+iostream
+-
+vector
+-
+SortSearch.hpp
+/home/gocarlos/git/unit_tests_example/src/SortSearch.hpp
+

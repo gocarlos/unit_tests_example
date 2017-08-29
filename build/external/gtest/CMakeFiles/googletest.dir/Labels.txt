@@ -1,0 +1,13 @@
+# Target labels
+ googletest
+# Source files and their labels
+/home/gocarlos/git/unit_tests_example/build/external/gtest/CMakeFiles/googletest
+/home/gocarlos/git/unit_tests_example/build/external/gtest/CMakeFiles/googletest.rule
+/home/gocarlos/git/unit_tests_example/build/external/gtest/CMakeFiles/googletest-complete.rule
+/home/gocarlos/git/unit_tests_example/build/external/gtest/src/googletest-stamp/googletest-install.rule
+/home/gocarlos/git/unit_tests_example/build/external/gtest/src/googletest-stamp/googletest-mkdir.rule
+/home/gocarlos/git/unit_tests_example/build/external/gtest/src/googletest-stamp/googletest-download.rule
+/home/gocarlos/git/unit_tests_example/build/external/gtest/src/googletest-stamp/googletest-update.rule
+/home/gocarlos/git/unit_tests_example/build/external/gtest/src/googletest-stamp/googletest-patch.rule
+/home/gocarlos/git/unit_tests_example/build/external/gtest/src/googletest-stamp/googletest-configure.rule
+/home/gocarlos/git/unit_tests_example/build/external/gtest/src/googletest-stamp/googletest-build.rule

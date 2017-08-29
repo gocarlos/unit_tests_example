@@ -1,0 +1,1 @@
+/usr/bin/g++-7      CMakeFiles/unit_test_example.dir/src/sorting_and_searching.cpp.o  -o unit_test_example -rdynamic 
