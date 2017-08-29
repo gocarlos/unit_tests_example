@@ -5,4 +5,5 @@ mkdir build
 cd build
 cmake ..
 make
-ctest
+# ctest # if one does not too much information
+ctest --extra-verbose
